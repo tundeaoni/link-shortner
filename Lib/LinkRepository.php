@@ -12,7 +12,7 @@ class LinkRepository implements IRepository
         if(is_null($urlDetails)){
             throw new \Illuminate\Database\Eloquent\ModelNotFoundException();
         }
-        return $urlDetails->first()->url;
+        return $urlDetails->url;
     }
 
     public function create($uniqId,$url) {
